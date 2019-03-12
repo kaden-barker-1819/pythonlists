@@ -152,7 +152,7 @@ def loser():
         jim.write("You Win")
     restart()
 #restart
-
+def restart():
 
 
 
