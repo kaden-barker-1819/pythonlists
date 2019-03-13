@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3ba02dc-0cba-40b9-9481-9cd5b1969d8c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,12 +27,10 @@
       <file leaf-file-name="Hangman.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hangman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="164">
+              <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
               <folding>
                 <element signature="e#21#34#0" expanded="true" />
-                <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-                <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
               </folding>
             </state>
           </provider>
@@ -48,6 +48,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>wrongcount</find>
+      <find>drawletter</find>
+      <find>guess</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -63,7 +65,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="654" />
+    <option name="x" value="684" />
     <option name="y" value="77" />
     <option name="width" value="751" />
     <option name="height" value="757" />
@@ -155,19 +157,19 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="654" y="77" width="751" height="757" extended-state="0" />
+    <frame x="684" y="77" width="751" height="757" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32876712" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32756132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32756132" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32756132" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -187,12 +189,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hangman.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="146" column="23" lean-forward="true" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
+          <folding>
+            <element signature="e#21#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MadLibArrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2115">
           <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -210,8 +227,6 @@
           <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -229,8 +244,6 @@
           <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -248,8 +261,6 @@
           <caret line="93" selection-start-line="93" selection-end-line="93" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -267,8 +278,6 @@
           <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -286,8 +295,6 @@
           <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -305,8 +312,6 @@
           <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
@@ -335,12 +340,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hangman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="164">
+          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
-            <marker date="1552407024294" expanded="true" signature="2564:2571" ph="..." />
-            <marker date="1552407024294" expanded="true" signature="2765:2769" ph="..." />
           </folding>
         </state>
       </provider>
