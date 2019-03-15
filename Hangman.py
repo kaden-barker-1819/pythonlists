@@ -16,7 +16,7 @@ jim.shape("turtle")
 jim.speed(20)
 jim.hideturtle()
 #this is the words list
-randomwords = ["pyrimid", "akward", "mystify", "polka", "yo", "rogue"]
+randomwords = ["bungler", "banjo", "fjord", "polka", "yo", "rogue"]
 
 
 
@@ -57,7 +57,10 @@ def wrongcounter():
         jimleftleg()
     elif wrongcount == 6:
         jimrightleg()
-    loser()
+    winloser()
+
+
+
 #draws head
 def jimhead():
     jim.circle(20)
@@ -67,44 +70,45 @@ def jimhead():
 
 #draws the body
 def jimbody():
-   jim.forward(100)
+    jim.forward(100)
     guess()
 
 #draws left arm
 def jimleftarm():
-   jim.back(75)
-   jim.right(45)
-   jim.forward(35)
+    jim.back(75)
+    jim.right(45)
+    jim.forward(35)
     guess()
 
 
 #draws right arm
 def jimrightarm():
-   jim.back(35)
-   jim.left(90)
-   jim.forward(35)
+    jim.back(35)
+    jim.left(90)
+    jim.forward(35)
     guess()
 #draws the left leg
 def jimleftleg():
-   jim.back(35)
-   jim.right(45)
-   jim.forward(75)
-   jim.right(45)
-   jim.forward(50)
+    jim.back(35)
+    jim.right(45)
+    jim.forward(75)
+    jim.right(45)
+    jim.forward(50)
     guess()
 # draws the right leg
 def jimrightleg():
-   jim.back(50)
-   jim.left(90)
-   jim.forward(50)
-    loser()
+    jim.back(50)
+    jim.left(90)
+    jim.forward(50)
+    winloser()
+
 #user inputs letter
 output = ['_'] * len(word)
 def guess():
     global wrongcount
     global rightcount
     miss = len(word)
-    letter = input ("Guess a letter please")
+    letter = input ("Guess a letter please ")
     for i in range(len(wordlist)):
         if letter == wordlist[i]:
             drawletter(i, letter)
@@ -117,7 +121,7 @@ def guess():
         wrongcounter()
     else:
         rightcount += 1
-
+        winloser()
 #puts wrong letters to the side
 
 
@@ -130,7 +134,7 @@ under.speed(10)
 
 
 def underscores():
-    # under.hideturtle()
+    under.hideturtle()
     under.penup()
     under.goto(-250,-250)
     under.pendown()
@@ -140,25 +144,41 @@ def underscores():
         under.pu()
         under.forward(50)
         under.pd()
-    under.goto(-250, -250)
-    under.forward(50 * wordlength)
 
 #corrects letter go in correct spot
 def drawletter(i, letter):
+    under.pu()
     under.goto(-250, -250)
     under.forward(50* i)
-    under.write(letter)
-
+    under.pd()
+    under.write(letter, font = ("Arial", 50, "bold"))
 #determins winner/loser
 
-def loser():
-    if wrongcount == 6:
-         jim.write("You Died!!")
-    elif rightcount == len(word):
-        jim.write("You Win")
 
+def winloser():
+    if wrongcount == 6:
+         jim.write("You Died!!", font = ("arial", 50, "bold"))
+         startover()
+    elif rightcount == len(word):
+        jim.write("You Win", font = ("arial", 50, "bold"))
+        startover()
+    else:
+        guess()
 #restart
 
+def startover():
+    restart = input("Would like to start over?? yes/no ")
+    if restart == ("yes"):
+        jim.clear()
+        under.clear()
+        hangjim()
+        underscores()
+        guess()
+    elif restart == ("no"):
+        print("Wow ok, Thanks for playing")
+    else:
+        print("Please only type yes or no")
+        startover()
 
 
 
@@ -174,4 +194,5 @@ underscores()
 hangjim()
 guess()
 window.exitonclick()
+
 
