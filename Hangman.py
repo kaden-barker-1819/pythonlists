@@ -27,7 +27,7 @@ for char in word:
     wordlist.append(char)
 
 wrongcount = 0
-
+rightcount = 0
 #draws hanging machine
 def hangjim():
     jim.left(180)
@@ -63,18 +63,19 @@ def jimhead():
     jim.circle(20)
     jim.circle(20,180)
     jim.right(90)
+    guess()
 
 #draws the body
 def jimbody():
    jim.forward(100)
-
+    guess()
 
 #draws left arm
 def jimleftarm():
    jim.back(75)
    jim.right(45)
    jim.forward(35)
-
+    guess()
 
 
 #draws right arm
@@ -82,7 +83,7 @@ def jimrightarm():
    jim.back(35)
    jim.left(90)
    jim.forward(35)
-
+    guess()
 #draws the left leg
 def jimleftleg():
    jim.back(35)
@@ -90,30 +91,32 @@ def jimleftleg():
    jim.forward(75)
    jim.right(45)
    jim.forward(50)
-
+    guess()
 # draws the right leg
 def jimrightleg():
    jim.back(50)
    jim.left(90)
    jim.forward(50)
-
+    loser()
 #user inputs letter
 output = ['_'] * len(word)
 def guess():
     global wrongcount
+    global rightcount
     miss = len(word)
     letter = input ("Guess a letter please")
     for i in range(len(wordlist)):
         if letter == wordlist[i]:
-            drawletter(i)
+            drawletter(i, letter)
 
         else:
             miss-= 1
 
     if miss == 0:
         wrongcount += 1
-    wrongcounter()
-        
+        wrongcounter()
+    else:
+        rightcount += 1
 
 #puts wrong letters to the side
 
@@ -141,22 +144,33 @@ def underscores():
     under.forward(50 * wordlength)
 
 #corrects letter go in correct spot
-def drawleter():
-    
+def drawletter(i, letter):
+    under.goto(-250, -250)
+    under.forward(50* i)
+    under.write(letter)
 
-#determins winner/loser
+
 def loser():
     if wrongcount == 6:
          jim.write("You Died!!")
     elif rightcount == len(word):
         jim.write("You Win")
-    restart()
+
 #restart
-def restart():
+
+
+
+
+
+
+
+
+
 
 
 
 underscores()
 hangjim()
+guess()
 window.exitonclick()
 
