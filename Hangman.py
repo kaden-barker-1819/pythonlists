@@ -129,20 +129,21 @@ def guess():
    miss = len(word)
    letter = input ("Guess a letter please ")
    for i in range(len(wordlist)):
+       print("joke")
        if letter.lower() == wordlist[i]:
+           print(rightcount)
            drawletter(i, letter)
-
        else:
-
+           print("hi")
            miss-= 1
-
    if miss == 0:
        wrongcount += 1
        print("bye")
        wrongcounter()
    else:
+       print(rightcount)
        rightcount += 1
-       print("test")
+       print(rightcount)
        winloser()
 #puts wrong letters to the side
 
@@ -179,6 +180,7 @@ def winloser():
    global wrongcount
    global rightcount
    global word
+   print(rightcount)
    if wrongcount == 6:
         jim.write("You Died!!", font = ("arial", 50, "bold"))
         print(wrongcount)
