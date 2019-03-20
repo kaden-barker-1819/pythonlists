@@ -4,9 +4,18 @@ import turtle
 import time
 import tkinter
 
+
+
 #window...
 window = turtle.Screen()
 window.bgcolor("black")
+
+#puts underlines under each letter
+under = turtle.Turtle()
+under.color("red")
+under.pensize(4)
+under.shape("turtle")
+under.speed(10)
 
 # the Turtle
 jim = turtle.Turtle()
@@ -18,16 +27,21 @@ jim.hideturtle()
 #this is the words list
 randomwords = ["bungler", "banjo", "fjord", "polka", "yo", "rogue"]
 
-
-
-#selects random word from list
-word = random.choice(randomwords)
-wordlist = []
-for char in word:
-    wordlist.append(char)
-
 wrongcount = 0
 rightcount = 0
+
+#selects random word from list
+def start():
+    global word
+    global wordlist
+    word = random.choice(randomwords)
+    print(word)
+    wordlist = []
+    for char in word:
+        wordlist.append(char)
+    underscores()
+
+
 #draws hanging machine
 def hangjim():
     jim.left(180)
@@ -40,6 +54,7 @@ def hangjim():
     jim.right(90)
     jim.forward(25)
     jim.right(90)
+
 
 #counts wrong letters guessed by the player
 
@@ -57,6 +72,7 @@ def wrongcounter():
         jimleftleg()
     elif wrongcount == 6:
         jimrightleg()
+    print("hi")
     winloser()
 
 
@@ -100,40 +116,43 @@ def jimrightleg():
     jim.back(50)
     jim.left(90)
     jim.forward(50)
-    winloser()
 
 #user inputs letter
-output = ['_'] * len(word)
+
+
+# output = ['_'] * len(word)
 def guess():
+    global wordlist
+    global word
     global wrongcount
     global rightcount
     miss = len(word)
     letter = input ("Guess a letter please ")
     for i in range(len(wordlist)):
-        if letter == wordlist[i]:
+        if letter.lower() == wordlist[i]:
             drawletter(i, letter)
 
         else:
+
             miss-= 1
 
     if miss == 0:
         wrongcount += 1
+        print("bye")
         wrongcounter()
     else:
         rightcount += 1
+        print("test")
         winloser()
 #puts wrong letters to the side
 
 
-#puts underlines under each letter
-under = turtle.Turtle()
-under.color("red")
-under.pensize(4)
-under.shape("turtle")
-under.speed(10)
+
 
 
 def underscores():
+    global word
+    global wordlist
     under.hideturtle()
     under.penup()
     under.goto(-250,-250)
@@ -144,6 +163,7 @@ def underscores():
         under.pu()
         under.forward(50)
         under.pd()
+    guess()
 
 #corrects letter go in correct spot
 def drawletter(i, letter):
@@ -152,47 +172,41 @@ def drawletter(i, letter):
     under.forward(50* i)
     under.pd()
     under.write(letter, font = ("Arial", 50, "bold"))
+    guess()
+
 #determins winner/loser
-
-
 def winloser():
+    global wrongcount
+    global rightcount
+    global word
     if wrongcount == 6:
          jim.write("You Died!!", font = ("arial", 50, "bold"))
+         print(wrongcount)
          startover()
     elif rightcount == len(word):
         jim.write("You Win", font = ("arial", 50, "bold"))
         startover()
     else:
+        print("guess")
         guess()
 #restart
 
 def startover():
     restart = input("Would like to start over?? yes/no ")
     if restart == ("yes"):
-        jim.clear()
-        under.clear()
-        hangjim()
-        underscores()
-        guess()
+        jim.reset()
+        under.reset()
+        start()
     elif restart == ("no"):
         print("Wow ok, Thanks for playing")
+        
     else:
         print("Please only type yes or no")
         startover()
 
 
-
-
-
-
-
-
-
-
-
-underscores()
 hangjim()
-guess()
+start()
 window.exitonclick()
 
 

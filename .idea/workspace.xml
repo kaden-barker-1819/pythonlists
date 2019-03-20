@@ -27,8 +27,8 @@
       <file leaf-file-name="Hangman.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hangman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="1314">
+              <caret line="201" column="8" selection-start-line="201" selection-start-column="8" selection-end-line="201" selection-end-column="8" />
               <folding>
                 <element signature="e#21#34#0" expanded="true" />
               </folding>
@@ -49,10 +49,11 @@
     <findStrings>
       <find>wrongcount</find>
       <find>drawletter</find>
-      <find>guess</find>
       <find>draw</find>
-      <find>wrongcounter</find>
+      <find>wordlist</find>
       <find>winloser</find>
+      <find>wrongcounter</find>
+      <find>guess</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -68,10 +69,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="742" />
-    <option name="y" value="80" />
-    <option name="width" value="698" />
-    <option name="height" value="757" />
+    <option name="x" value="773" />
+    <option name="y" value="23" />
+    <option name="width" value="990" />
+    <option name="height" value="791" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -79,7 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,6 +91,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,13 +161,13 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="742" y="80" width="698" height="757" extended-state="0" />
+    <frame x="773" y="23" width="990" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32756132" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32756132" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3122421" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -183,6 +184,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MadLibArrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hangman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#21#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MadLibArrays.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -360,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hangman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        <state relative-caret-position="1314">
+          <caret line="201" column="8" selection-start-line="201" selection-start-column="8" selection-end-line="201" selection-end-column="8" />
           <folding>
             <element signature="e#21#34#0" expanded="true" />
           </folding>
